@@ -1,4 +1,5 @@
 ---
+description: "Use when parsing, validating, or authoring users/<user-id>/info.md data for portal site generation."
 applyTo: "users/**/info.md"
 ---
 
@@ -8,13 +9,9 @@ applyTo: "users/**/info.md"
 
 ## 第1階層セクション
 
-- 基本情報
-- 会社案内
-- 事業内容/サービス
-- 製品情報
-- 採用情報
-- 問い合わせ
-- Style
+- design
+- define
+- pages
 
 ## 抽出ルール
 

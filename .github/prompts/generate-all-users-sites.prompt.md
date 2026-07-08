@@ -1,14 +1,14 @@
 ---
-mode: ask
-model: GPT-5.3-Codex
-description: 全ユーザー向けポータルサイトを一括生成する
+description: "全ユーザー向けポータルサイトを一括生成する。"
+agent: "Portal Site Generator"
+argument-hint: "all"
 ---
 
 `users/` 配下の全ユーザーサイトを一括生成してください。
 
 実行要件:
 1. `users/*/info.md` を自動検出すること。
-2. 各ユーザーごとに `## template` を解決し、必要なテンプレートを先に展開すること。
+2. 各ユーザーごとに `design.template` を解決し、必要なテンプレートを先に展開すること。
 3. 各ユーザーを独立して `sites/<user-id>/` に生成すること。
 4. いずれかのユーザーで失敗しても全体処理を中断せず、他ユーザーの処理を継続すること。
 5. 最終的に `sites/generation-summary.md` を出力し、以下を含めること。

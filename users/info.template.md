@@ -44,7 +44,7 @@ description: ユーザー情報入力テンプレート
 - contact(お問い合わせ)
 -->
 
-## <name1-eng>(<name1-jpn>)
+## page: <name1-eng>(<name1-jpn>)
 ### item-1: xxx
 #### sub-item-1: xxx
 #### sub-item-2: xxx
@@ -55,7 +55,7 @@ description: ユーザー情報入力テンプレート
 #### sub-item-3: ...
 ### item-3: ...
 
-## <name2-eng>(<name2-jpn>)
+## page: <name2-eng>(<name2-jpn>)
 ### item-1: xxx
 #### sub-item-1: xxx
 #### sub-item-2: xxx
@@ -65,5 +65,28 @@ description: ユーザー情報入力テンプレート
 #### sub-item-2: xxx
 #### sub-item-3: ...
 ### item-3: ...
+
+<!-- pageのしたにsubpageを定義も可能 -->
+### page: <name2-subpage1-eng>(<name2-subpage1-jpn>)
+#### item-1: xxx
+##### sub-item-1: xxx
+##### sub-item-2: xxx
+##### sub-item-3: ...
+#### item-2: xxx
+##### sub-item-1: xxx
+##### sub-item-2: xxx
+##### sub-item-3: ...
+#### item-3: ...
+
+### page: <name2-subpage2-eng>(<name2-subpage2-jpn>)
+#### item-1: xxx
+##### sub-item-1: xxx
+##### sub-item-2: xxx
+##### sub-item-3: ...
+#### item-2: xxx
+##### sub-item-1: xxx
+##### sub-item-2: xxx
+##### sub-item-3: ...
+#### item-3: ...
 
 ## ...

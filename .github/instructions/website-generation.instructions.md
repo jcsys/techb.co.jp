@@ -1,4 +1,5 @@
 ---
+description: "Use when generating or updating portal site HTML, CSS, JavaScript, assets, or generation reports from users/<user-id>/info.md."
 applyTo: "users/**/info.md, sites/**/*.html, sites/**/*.css, sites/**/*.js"
 ---
 
@@ -10,15 +11,20 @@ applyTo: "users/**/info.md, sites/**/*.html, sites/**/*.css, sites/**/*.js"
 
 - 出力先ディレクトリは `sites/<user-id>/` に固定すること。
 - `users/<user-id>/` の元データを変更しないこと。
-- `info.md` の `## template` がある場合、まず指定テンプレートを取得して `sites/<user-id>/` へ展開すること。
+- `info.md` の `design.template` がある場合、まず指定テンプレートを取得して `sites/<user-id>/` へ展開すること。
+- `users/<user-id>/assets/` を直接参照せず、必要な素材は `sites/<user-id>/assets/` へコピーして参照する。
+- templateにもassetsフォルダがある場合、素材名が被っている場合、必要に応じってリネームする。
+- `index.html` は必ず作成し、主要ページへのナビゲーションを置く。
+- `sites/<user-id>/` の中だけで完結する相対パスを使う。
 - 各ページには共通ナビゲーション、フッター、問い合わせ導線を含めること。
 - 既定言語はユーザーデータの言語に合わせ、不要な翻訳を行わないこと。
 - 欠損項目は構造を維持したままプレースホルダを入れ、生成レポートに記録すること。
 
 ## ページ規約
 
-- 必須生成: `index.html`, `company.html`, `services.html`, `contact.html`。
-- データがある場合のみ生成: `products.html`, `careers.html`, `news.html`。
+- 企業・団体サイトとして自然なトップページ、会社案内、事業紹介、製品・サービス、採用、お問い合わせを構成する。
+- CSS は既存テンプレートの構成を尊重し、必要な上書きは専用ファイルまたは末尾にまとめる。
+- テンプレートのライセンス表記、クレジット、著作権表記は削除しない。
 - すべてのページで共通リソースパスを使用すること:
   - `assets/css/style.css`
   - `assets/js/main.js`

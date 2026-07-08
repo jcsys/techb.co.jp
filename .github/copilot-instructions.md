@@ -32,8 +32,8 @@ webgen/
     instructions/
     prompts/
     skills/
-    superpowers/
-    copilot-introduction.md
+    superpowers/        # project reference docs; not auto-discovered by Copilot
+    copilot-instructions.md
   users/
     user-1/
       assets/
@@ -49,8 +49,8 @@ webgen/
 ## データマッピング規則
 
 - `info.md` はコンテンツの単一情報源とする。
-- `info.md` に `## template` セクションがある場合、その値を生成ベーステンプレートとして扱う。
-- `template` が `html5up.net/<template-name>` 形式の場合、`https://html5up.net/<template-name>/download` をダウンロード URL として解決する。
+- `info.md` に `design.template` セクションがある場合、その値を生成ベーステンプレートとして扱う。
+`design.template` が `html5up.net/<template-name>` 形式の場合、`https://html5up.net/<template-name>/download` をダウンロード URL として解決する。
 - 項目が不足している場合、生成器は以下を実施する。
   - セクション構造を維持する。
   - プレースホルダ文言を挿入する。
@@ -95,13 +95,13 @@ webgen/
 - `skills/`: データ解析、ページ構築、検証などの再利用スキルを定義する。
 - `agents/`: スキル実行順を管理する編成役を定義する。
 - `prompts/`: 手動実行の入口を定義する。
-- `superpowers/`: 単体生成や一括生成など高頻度ワークフローを定義する。
+- `superpowers/`: 単体生成や一括生成など高頻度ワークフローの参考文書を定義する。Copilot の標準自動発見対象ではない。
 
 ## 推奨実行フロー
 
 1. ユーザー ID を選択する。
 2. `users/<user-id>/info.md` を解析する。
-3. `## template` を解決し、必要に応じてテンプレートをダウンロードする。
+3. `design.template` を解決し、必要に応じてテンプレートをダウンロードする。
 4. `users/<user-id>/assets/` をインデックス化する。
 5. テンプレート上でページ生成計画を作成する。
 6. `sites/<user-id>/` にテンプレートを展開し、その上にサイト内容を生成する。
