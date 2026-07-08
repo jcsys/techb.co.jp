@@ -1,1 +1,8 @@
-{}
+{
+	"files.encoding": "utf8",
+	"files.eol": "\n",
+	"markdown.validate.enabled": true,
+	"github.copilot.chat.codeGeneration.useInstructionFiles": true,
+	"chat.promptFiles": true,
+	"chat.promptFilesRecommendations": true
+}

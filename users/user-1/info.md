@@ -1,3 +1,7 @@
+---
+description: 株式会社 J.C.SystemのサンプルサイトA
+---
+
 # design
 
 ## template
