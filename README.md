@@ -39,6 +39,46 @@
 
 # Usage
 
+## Visual Builder
+
+第一版では、ブラウザで会社情報を入力し、静的企業サイトを生成できます。
+
+```shell
+npm.cmd run dev
+```
+
+起動後、下記を開きます。
+
+```text
+http://localhost:3000
+```
+
+Visual Builder の流れ:
+
+1. `user-id` と会社情報を入力する
+2. ロゴ、トップ画像、サービス画像などを `assets` に保存する
+3. トップ、会社案内、サービス、製品情報、採用情報、お問い合わせを入力する
+4. 右側のライブプレビューで構成を確認する
+5. `info.md 保存` で `users/<user-id>/info.md` を生成する
+6. `AI Prompt 作成` でAI生成向けのPromptを確認する
+7. `静的サイト生成` で `sites/<user-id>/` にHTML/CSS/JSを出力する
+
+第一版の生成器は、入力された事実情報を確実に反映するため、固定の企業サイト構成で静的サイトを生成します。AIは後続ステップとして、文案改善やデザイン生成に接続できるよう `AI Prompt` を出力します。
+
+出力ページ:
+
+```text
+sites/<user-id>/
+├─ index.html
+├─ company.html
+├─ services.html
+├─ products.html
+├─ careers.html
+├─ contact.html
+├─ robots.txt
+└─ assets/
+```
+
 ## 開発時
 
 ### ツール

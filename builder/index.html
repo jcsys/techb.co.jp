@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>webgen Visual Builder</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">webgen Visual Builder</p>
+      <h1>静的企業サイト生成</h1>
+    </div>
+    <p>会社情報を入力し、J.C.System風の構成を参考にした静的サイトを生成します。</p>
+  </header>
+
+  <main class="layout">
+    <form id="builder-form" class="panel form-panel">
+      <section class="section">
+        <div class="section__head">
+          <span>1</span>
+          <div><h2>基本情報</h2><p>ユーザーIDと会社の共通情報です。</p></div>
+        </div>
+        <div class="grid">
+          <label>user-id<input name="userId" value="tech-bridge"></label>
+          <label>会社名<input name="defines.companyName" value="Tech Bridge株式会社"></label>
+          <label>サイト名<input name="defines.siteName" value="Tech Bridge"></label>
+          <label>公式URL<input name="defines.officialUrl" value="https://tech-bridge.co.jp"></label>
+          <label>住所<input name="defines.address"></label>
+          <label>TEL<input name="defines.tel"></label>
+          <label>FAX<input name="defines.fax"></label>
+          <label>メール<input name="defines.email"></label>
+          <label class="wide">Copyright<input name="defines.copyright" value="Copyright © 2026 Tech Bridge Inc. All Rights Reserved."></label>
+          <label>ロゴパス<input name="defines.siteLogo" placeholder="assets/logo.png"></label>
+          <label>フッターロゴパス<input name="defines.siteLogoSub" placeholder="assets/logo_w.png"></label>
+        </div>
+        <div class="asset-row">
+          <label>画像アップロード<input type="file" id="asset-upload" accept="image/*"></label>
+          <button type="button" class="secondary" id="upload-asset">assetsへ保存</button>
+          <span id="asset-result"></span>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__head">
+          <span>2</span>
+          <div><h2>デザイン</h2><p>第一版は軽量な固定企業サイト構成です。</p></div>
+        </div>
+        <div class="grid">
+          <label>template<input name="design.template" placeholder="html5up.net/editorial"></label>
+          <label>layout<input name="design.layout" value="jc-system-corporate"></label>
+          <label>Primary Color<input type="color" name="design.primaryColor" value="#27779f"></label>
+          <label>Accent Color<input type="color" name="design.accentColor" value="#4fa7d6"></label>
+          <label>Font<input name="design.font" value="Noto Sans JP"></label>
+          <label class="wide">Style Note<textarea name="design.style">J.C.Systemのような信頼感のある企業サイト構成を参考にする</textarea></label>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__head">
+          <span>3</span>
+          <div><h2>トップ</h2><p>ファーストビューとトップページの要約です。</p></div>
+        </div>
+        <div class="grid">
+          <label class="wide">メイン画像パス<input name="top.mainImage" placeholder="assets/top_main.jpg"></label>
+          <label class="wide">キャッチコピー<input name="top.catchcopy" value="日本と世界をつなぐテクノロジーパートナー"></label>
+          <label class="wide">リード文<textarea name="top.lead">システム開発、Web制作、IT支援を通じて、お客様の事業成長を支えます。</textarea></label>
+          <label class="wide">ABOUTタイトル<input name="top.aboutTitle" value="Tech Bridgeについて"></label>
+          <label class="wide">ABOUT項目（一行一件）<textarea name="top.aboutItems">お客様の課題に寄り添い、最適なITソリューションを提案します。
+日本国内と海外リソースを活用し、柔軟な開発体制を構築します。</textarea></label>
+          <label class="wide">SERVICE要約<textarea name="top.serviceSummary">Webサイト制作、業務システム開発、ITコンサルティングを提供します。</textarea></label>
+          <label class="wide">PRODUCTS要約<textarea name="top.productsSummary">自社サービスや導入実績を分かりやすく紹介します。</textarea></label>
+          <label class="wide">RECRUIT要約<textarea name="top.recruitSummary">共に成長できるメンバーを募集しています。</textarea></label>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__head">
+          <span>4</span>
+          <div><h2>会社案内</h2><p>ご挨拶、会社概要、沿革などです。</p></div>
+        </div>
+        <div class="grid">
+          <label>ご挨拶画像<input name="company.greetingImage" placeholder="assets/greet.jpg"></label>
+          <label>代表者<input name="company.representative"></label>
+          <label class="wide">ご挨拶タイトル<input name="company.greetingTitle" value="ご挨拶"></label>
+          <label class="wide">ご挨拶本文<textarea name="company.greetingText">私たちは、技術と信頼を大切にしながら、お客様のビジネスに貢献する会社を目指しています。</textarea></label>
+          <label class="wide">会社概要（項目: 内容、一行一件）<textarea name="company.profile">会社名: Tech Bridge株式会社
+設立年月日:
+資本金:
+代表者名:
+事業内容: Webサイト制作、システム開発、ITコンサルティング
+所在地:</textarea></label>
+          <label class="wide">沿革（年: 内容、一行一件）<textarea name="company.history">2026年: Tech Bridge株式会社 設立</textarea></label>
+          <label class="wide">グループ会社（一行一件）<textarea name="company.groupCompanies"></textarea></label>
+          <label class="wide">業務実績（一行一件）<textarea name="company.achievements"></textarea></label>
+          <label class="wide">アクセス<textarea name="company.access"></textarea></label>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__head with-action">
+          <span>5</span>
+          <div><h2>サービス</h2><p>複数追加できます。</p></div>
+          <button type="button" class="secondary" id="add-service">追加</button>
+        </div>
+        <div id="services-list" class="repeat-list"></div>
+      </section>
+
+      <section class="section">
+        <div class="section__head with-action">
+          <span>6</span>
+          <div><h2>製品情報</h2><p>製品や事例を追加します。</p></div>
+          <button type="button" class="secondary" id="add-product">追加</button>
+        </div>
+        <div id="products-list" class="repeat-list"></div>
+      </section>
+
+      <section class="section">
+        <div class="section__head with-action">
+          <span>7</span>
+          <div><h2>採用情報</h2><p>募集要項を追加します。</p></div>
+          <button type="button" class="secondary" id="add-job">募集職種を追加</button>
+        </div>
+        <div class="grid">
+          <label class="wide">採用メッセージ<textarea name="careers.message">新しい価値を一緒に作る仲間を募集しています。</textarea></label>
+          <label class="wide">プライバシーポリシー<textarea name="careers.privacyPolicy">当サイトは、お客様の個人情報を適切に管理し、目的外利用を行いません。</textarea></label>
+        </div>
+        <div id="jobs-list" class="repeat-list"></div>
+      </section>
+
+      <section class="section">
+        <div class="section__head">
+          <span>8</span>
+          <div><h2>お問い合わせ</h2><p>問い合わせページに反映します。</p></div>
+        </div>
+        <div class="grid">
+          <label>電話<input name="contact.phone"></label>
+          <label>メール<input name="contact.email"></label>
+          <label class="wide">住所<input name="contact.address"></label>
+          <label class="wide">Google Map URL<input name="contact.mapUrl"></label>
+          <label class="wide">説明<textarea name="contact.description">お問い合わせは下記のフォームまたはメールにてご連絡ください。</textarea></label>
+        </div>
+      </section>
+
+      <div class="actions">
+        <button type="button" id="save-info">info.md 保存</button>
+        <button type="button" id="build-ai-prompt">AI Prompt 作成</button>
+        <button type="button" id="generate-site" class="primary">静的サイト生成</button>
+      </div>
+    </form>
+
+    <aside class="preview-panel">
+      <section class="panel">
+        <h2>ステータス</h2>
+        <div id="status" class="status">準備完了です。</div>
+      </section>
+      <section class="panel">
+        <h2>ライブプレビュー</h2>
+        <div id="live-preview" class="live-preview"></div>
+      </section>
+      <section class="panel hidden" id="result-panel"></section>
+      <section class="panel">
+        <h2>info.md</h2>
+        <pre id="info-output"></pre>
+      </section>
+      <section class="panel">
+        <h2>AI Prompt</h2>
+        <pre id="prompt-output">「AI Prompt 作成」をクリックすると表示されます。</pre>
+      </section>
+    </aside>
+  </main>
+</body>
+</html>
