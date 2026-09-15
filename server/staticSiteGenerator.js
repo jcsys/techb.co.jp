@@ -19,7 +19,9 @@ function normalizeAssetPath(src) {
   const value = text(src).trim();
   if (!value) return '';
   if (/^(https?:)?\/\//.test(value) || value.startsWith('data:')) return value;
-  return value.replace(/^assets\//, 'assets/');
+  if (value.startsWith('assets/img/')) return value;
+  if (value.startsWith('assets/')) return value.replace(/^assets\//, 'assets/img/');
+  return value;
 }
 
 function img(src, alt, className = '') {

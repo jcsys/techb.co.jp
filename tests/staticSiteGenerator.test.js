@@ -11,7 +11,12 @@ test('generateStaticSite writes multi-page static corporate site', () => {
   const siteData = createDefaultSiteData();
   siteData.userId = 'tech-bridge';
   siteData.defines.companyName = 'Tech Bridge株式会社';
+  siteData.defines.siteLogo = 'assets/logo.svg';
   siteData.defines.tel = '03-1234-5678';
+  siteData.services[0].image = 'assets/service-system-app.png';
+  fs.mkdirSync(path.join(root, 'users', 'tech-bridge', 'assets'), { recursive: true });
+  fs.writeFileSync(path.join(root, 'users', 'tech-bridge', 'assets', 'logo.svg'), '<svg></svg>');
+  fs.writeFileSync(path.join(root, 'users', 'tech-bridge', 'assets', 'service-system-app.png'), '');
 
   const result = generateStaticSite(root, siteData);
 
@@ -28,5 +33,8 @@ test('generateStaticSite writes multi-page static corporate site', () => {
 
   assert.match(index, /Tech Bridge株式会社/);
   assert.match(index, /日本と世界をつなぐ/);
+  assert.match(index, /assets\/img\/logo\.svg/);
+  assert.match(index, /assets\/img\/service-system-app\.png/);
   assert.match(contact, /03-1234-5678/);
+  assert.equal(fs.existsSync(path.join(root, 'sites', 'tech-bridge', 'assets', 'img', 'logo.svg')), true);
 });

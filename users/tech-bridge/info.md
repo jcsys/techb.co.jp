@@ -1,5 +1,5 @@
 ---
-description: Tech Bridge株式会社の静的企業サイト入力情報
+description: 株式会社テックブリッジの静的企業サイト入力情報
 ---
 
 # design
@@ -25,17 +25,17 @@ jc-system-corporate
 # defines
 
 - site-logo:
-  
+  ![](assets/img/logo.svg)
 - site-logo-sub:
-  
+  ![](assets/img/greeting.png)
 - company-name:
-  Tech Bridge株式会社
+  株式会社テックブリッジ
 - site-name:
   Tech Bridge
 - copyright:
   Copyright © 2026 Tech Bridge Inc. All Rights Reserved.
 - address:
-  
+  大阪市淀川区西宮原三丁目2番1-727号
 - tel:
   
 - fax:
@@ -49,7 +49,7 @@ jc-system-corporate
 
 ## index(トップ)
 
-
+![](assets/main-hero.png)
 
 ### item-1: ABOUT / Tech Bridgeについて
 
@@ -80,27 +80,31 @@ Webサイト制作、業務システム開発、ITコンサルティングを提
 
 ### item-1: ご挨拶
 
-
+![](assets/img/greeting.png)
 
 私たちは、技術と信頼を大切にしながら、お客様のビジネスに貢献する会社を目指しています。
 
 #### sub-item-1: 署名
 
-
+張長安
 
 ### item-2: 会社概要
 
-- 会社名：Tech Bridge株式会社
-- 設立年月日：
-- 資本金：
-- 代表者名：
-- 事業内容：Webサイト制作、システム開発、ITコンサルティング
-- 所在地：
+- 会社名：株式会社テックブリッジ
+- 会社法人等番号：1200-01-277978
+- 設立年月日：令和7年7月11日
+- 資本金：500万円
+- 代表者名：張長安
+- 事業内容：情報通信システム及びアプリケーションソフトウェアの企画・開発・制作・運営・保守、人材派遣及び有料職業紹介、不動産関連事業、観光関連サービス、各種商品の販売・輸出入等
+- 所在地：大阪市淀川区西宮原三丁目2番1-727号
+- 公告方法：官報に掲載してする
 
 ### item-3: 沿革
 
-- 2026年
-  Tech Bridge株式会社 設立
+- 令和7年7月11日
+  株式会社テックブリッジ 設立
+- 令和7年7月11日
+  登記
 
 ### item-4: グループ会社
 
@@ -116,25 +120,37 @@ Webサイト制作、業務システム開発、ITコンサルティングを提
 
 ## services(サービス/事業内容)
 
-### item-1: Webサイト制作
+### item-1: システム・アプリケーション開発
 
-企業サイト、LP、採用サイトなど、目的に合わせた静的Webサイトを制作します。
+各種情報通信システム及びアプリケーションソフトウェアの企画、開発、制作、配信、管理、運営、保守及び販売を行います。
 
+![](assets/img/service-system-app.png)
 
+### item-2: 人材派遣・職業紹介
 
-### item-2: システム開発
+人材派遣業及び有料職業紹介事業を通じて、企業の人材課題を支援します。
 
-業務効率化やサービス立ち上げに必要なWebシステムを設計・開発します。
+![](assets/img/service-staffing.png)
 
+### item-3: 事業支援・コンサルティング
 
+企業の買収、合併、事業統合、業務提携、事業譲渡、資本参加等に関する支援及びコンサルティングを行います。
+
+![](assets/img/service-consulting.png)
+
+### item-4: 不動産・宿泊・観光関連事業
+
+不動産の売買、賃貸、仲介、管理及びコンサルティング、住宅宿泊事業、観光関連サービスを提供します。
+
+![](assets/img/service-realestate-tourism.png)
 
 ## products(製品情報)
 
-### item-1: 導入事例・サービス紹介
+### item-1: ITソリューション・業務支援サービス
 
-お客様の課題解決につながるサービスや事例を紹介します。
+情報通信システム、アプリケーションソフトウェア、業務支援サービスを組み合わせ、お客様の事業成長を支援します。
 
-
+![](assets/product-it-solution.png)
 
 ## careers(採用情報)
 
@@ -164,7 +180,7 @@ Webサイト制作、業務システム開発、ITコンサルティングを提
 
 - 電話番号： 
 - メールアドレス： 
-- 住所： 
+- 住所： 大阪市淀川区西宮原三丁目2番1-727号
 - 公式サイトURL： https://tech-bridge.co.jp
 - Google Map URL： 
 
