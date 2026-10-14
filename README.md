@@ -1,5 +1,7 @@
 # Description
 
+> 運用、公開、トラブルシューティングを含む引き継ぎ手順は [HANDOVER.md](./HANDOVER.md) を参照してください。
+
 ユーザーの入力情報に応じて、AI が静的ポータルサイトを生成する工程である。
 
 # Introduction
