@@ -6,6 +6,7 @@
   <meta name="description" content="株式会社テックブリッジの企業サイト">
   <title>お問い合わせ | 株式会社テックブリッジ</title>
   <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <script src="assets/js/main.js" defer></script>
 </head>
 <body>
@@ -30,6 +31,7 @@
         <label>お名前<input type="text" name="name"></label>
         <label>メール<input type="email" name="email"></label>
         <label>お問い合わせ内容<textarea name="message"></textarea></label>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAGSL0epuI3Oilo80"></div>
         <button class="button" type="submit">送信する</button>
       </form>
     </section>
